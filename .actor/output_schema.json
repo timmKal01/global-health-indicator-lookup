@@ -1,0 +1,11 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of Global Health Indicator Lookup",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Indicator values",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

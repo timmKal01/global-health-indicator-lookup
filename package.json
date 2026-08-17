@@ -1,0 +1,15 @@
+{
+    "name": "global-health-indicator-lookup",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Look up WHO Global Health Observatory indicators by country and year via the official WHO GHO OData API.",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.2.6"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}

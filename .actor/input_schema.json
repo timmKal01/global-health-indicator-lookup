@@ -1,0 +1,29 @@
+{
+    "title": "Global Health Indicator Lookup Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "countries": {
+            "title": "Countries",
+            "type": "array",
+            "editor": "stringList",
+            "description": "One or more ISO 3-letter country codes, e.g. \"USA\", \"GBR\", \"JPN\", \"IND\"."
+        },
+        "indicatorCode": {
+            "title": "Indicator code",
+            "type": "string",
+            "editor": "textfield",
+            "description": "A WHO GHO indicator code. Common ones: WHOSIS_000001 (life expectancy at birth), WHOSIS_000002 (healthy life expectancy), WHS4_100 (measles immunization coverage %), SA_0000001688 (alcohol consumption per capita), GHED_CHEGDP_SHA2011 (health spending % of GDP). Browse the full catalog at https://ghoapi.azureedge.net/api/Indicator or the WHO GHO OData site."
+        },
+        "mostRecentYears": {
+            "title": "Most recent years",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many of the most recent distinct years (per country) to return. Indicators broken down by sex/age/etc return multiple rows per year.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 20
+        }
+    },
+    "required": ["countries", "indicatorCode"]
+}

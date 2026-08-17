@@ -1,0 +1,13 @@
+{
+    "actorSpecification": 1,
+    "name": "global-health-indicator-lookup",
+    "title": "Global Health Indicator Lookup — WHO Data",
+    "description": "Look up any WHO Global Health Observatory indicator (life expectancy, immunization coverage, disease prevalence, health spending, and thousands more) for one or more countries over recent years via the official WHO GHO OData API. For global health, NGO, and public-health research teams.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile"
+}
