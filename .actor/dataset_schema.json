@@ -1,0 +1,53 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "countryCode",
+                    "indicatorCode",
+                    "year",
+                    "value",
+                    "displayValue",
+                    "dimension1",
+                    "dimension1Type"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "countryCode": {
+                        "label": "Country code",
+                        "format": "text"
+                    },
+                    "indicatorCode": {
+                        "label": "Indicator code",
+                        "format": "text"
+                    },
+                    "year": {
+                        "label": "Year",
+                        "format": "number"
+                    },
+                    "value": {
+                        "label": "Value",
+                        "format": "number"
+                    },
+                    "displayValue": {
+                        "label": "Display value",
+                        "format": "text"
+                    },
+                    "dimension1": {
+                        "label": "Dimension1",
+                        "format": "text"
+                    },
+                    "dimension1Type": {
+                        "label": "Dimension1 type",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}
