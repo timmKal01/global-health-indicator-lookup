@@ -67,4 +67,4 @@ whether you request 1 country/1 year or 20 countries/20 years.
 
 ## Related products
 
-- [Economic Indicator Lookup](https://github.com/timmKal01/economic-indicator-lookup) — the World Bank economic counterpart to this WHO health data
+- [World Bank Data Lookup](https://apify.com/m_ctim/economic-indicator-lookup): the World Bank economic counterpart to this WHO health data
