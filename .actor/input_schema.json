@@ -29,5 +29,5 @@
             "maximum": 20
         }
     },
-    "required": ["countries", "indicatorCode"]
+    "required": []
 }
