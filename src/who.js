@@ -1,3 +1,7 @@
+// Some public APIs refuse requests that identify themselves only as Node's default "node" user agent (data.cms.gov
+// started doing so in October 2026), so every request says which tool is asking and where to find it.
+const USER_AGENT = 'global-health-indicator-lookup/0.1 (+https://apify.com/m_ctim/global-health-indicator-lookup)';
+
 const BASE_URL = 'https://ghoapi.azureedge.net/api';
 const REQUEST_TIMEOUT_MS = 30_000;
 
@@ -9,7 +13,7 @@ async function fetchWithRetry(url, { retries = 4, baseDelayMs = 1500 } = {}) {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
         try {
-            const res = await fetch(url, { headers: { Connection: 'close' }, signal: controller.signal });
+            const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Connection: 'close' }, signal: controller.signal });
             if (res.status === 404) return res; // unknown indicator — not retryable, caller handles it
             if (res.ok) return res;
             if (![429, 500, 502, 503, 504].includes(res.status)) {
